@@ -1,0 +1,287 @@
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+  }
+  
+  header h1 {
+    font-family: Raleway;
+    font-size: 16pt;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    font-family: inter;
+    font-weight: lighter;
+    font-size: 16pt;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid black;
+  }
+  
+ .intro h2 {
+  font-family: Raleway;
+  font-size: 200pt;
+  font-weight: bold;
+  padding: 0 2rem;
+  margin-top: 0;
+  white-space: pre-line;
+}
+
+.intro {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+.intro-content {
+  display: none; /* VERBERG standaard */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;        /* Zorgt dat alles mooi gecentreerd blijft */
+  margin: -60px auto 0;     /* bovenmarge om dichter bij "HEY THERE!!!" te komen */
+  padding: 0 2rem;          /* veilige ruimte aan de zijkanten op kleine schermen */
+}
+
+  
+.bio {
+  flex: 1;
+  max-width: 300px;
+  padding-top: 40pt;
+  font-family: inter;
+  font-size: 10pt;
+  font-weight: light;
+  text-align: justify;
+}
+  
+.intro-content img {
+  width: 500px;
+  height: auto;
+}
+
+
+  .projects {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+  }
+  
+.projects h3 {
+  font-size: 8rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+  
+.project-link {
+  display: block;
+  font-size: 6rem;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  padding: 2rem 0 2rem 2rem;
+  border-top: 1px solid black;
+  transition: all 0.3s ease;
+}
+
+  
+  .project-link:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  
+  .contact {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  .contact h3 {
+    font-size: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-family: Raleway;
+  }
+
+  .contact p {
+    font-size: 12pt;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+  }
+  
+  .contact a {
+    color: white;
+    text-decoration: underline;
+    list-style: none;
+    font-family: Raleway;
+    font-weight: bolder;
+    font-size: 12pt;
+  }
+
+  .contact ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.contact ul li {
+  margin-bottom: 1rem; 
+}
+  
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2rem;
+    color: white;
+    background-color: black;
+  }
+
+  html {
+  scroll-behavior: smooth;
+}
+#about {
+  scroll-margin-top: 100px; /* pas dit aan afhankelijk van je headerhoogte */
+}
+
+.cursor::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .intro h2 {
+    font-size: 120pt;
+  }
+
+  .projects h3,
+  .contact h3 {
+    font-size: 6rem;
+  }
+
+  .project-link {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+
+  header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 14pt;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 14pt;
+    margin-left: 0;
+  }
+
+  .intro h2 {
+    font-size: 80pt;
+    padding: 0 1rem;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  .bio {
+    max-width: 100%;
+    padding-top: 0;
+    font-size: 10pt;
+  }
+
+  .intro-content img {
+    width: 90%;
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+
+  .projects h3 {
+    font-size: 4rem;
+    padding-left: 1rem;
+  }
+
+  .project-link {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact h3 {
+    font-size: 4rem;
+  }
+
+  .contact p {
+    font-size: 11pt;
+  }
+
+  .contact a {
+    font-size: 11pt;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h2 {
+    font-size: 50pt;
+  }
+
+  .projects h3,
+  .contact h3 {
+    font-size: 3rem;
+  }
+
+  .project-link {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 10pt;
+  }
+
+  .contact a {
+    font-size: 10pt;
+  }
+}

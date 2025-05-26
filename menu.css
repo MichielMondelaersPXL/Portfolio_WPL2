@@ -1,0 +1,229 @@
+/* Algemene pagina opmaak */
+body {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+  }
+  
+  header h1 {
+    font-family: Raleway;
+    font-size: 16pt;
+  }
+  
+
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    font-family: inter;
+    font-weight: lighter;
+    font-size: 16pt;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  nav a.active {
+  border-bottom: 2px solid black;
+}
+
+
+/* Titel en submenu */
+.projects-page h1 {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.work-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-family: Inter;
+  font-size: 16pt;
+  font-weight: 400;
+  max-width: 660px; /* breedte van het woord PROJECTS */
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  transform: translateX(+10px);
+}
+
+
+.work-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.work-nav a.active {
+  font-weight: bold;
+}
+
+/* Projectenlijst */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  max-width: 1100px; /* laat dit bestaan om inhoud te beperken */
+}
+
+.project-text {
+  flex: 1;
+  padding: 0;
+}
+
+.project-number {
+  display: block; /* ✨ cruciale fix */
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0; /* ruimte onder het nummer */
+}
+
+
+.project h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+
+.project img {
+  width: 420px;
+  max-height: 300px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  width: 100%;
+}
+
+.project:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-wrapper {
+  background-color: white;
+  transition: background-color 0.3s ease;
+  padding: 0; /* <-- dit is cruciaal */
+}
+
+.project-wrapper:hover {
+  background-color: black;
+}
+
+.project-wrapper:hover .project-number,
+.project-wrapper:hover h2 {
+  color: white;
+}
+
+.project-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link-wrapper:hover {
+  color: inherit;
+}
+
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 1024px) {
+  .projects-page h1 {
+    font-size: 5rem;
+    padding-left: 1.5rem;
+  }
+
+  .work-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    font-size: 14pt;
+    padding: 0 1.5rem;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .project h2 {
+    text-align: center;
+  }
+
+  .project-number {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    font-size: 14pt;
+    margin: 0 0.5rem;
+  }
+
+  .projects-page h1 {
+    font-size: 3.5rem;
+    padding-left: 1rem;
+  }
+
+  .work-nav {
+    font-size: 12pt;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .project h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-number {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,98 @@
+body {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+  }
+  
+  header h1 {
+    font-family: Raleway;
+    font-size: 16pt;
+  }
+  
+
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    font-family: inter;
+    font-weight: lighter;
+    font-size: 16pt;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  nav a.active {
+  border-bottom: 2px solid black;
+}
+
+.poster-page {
+  padding: 0 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.poster-page h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: 5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  max-width: 700px;
+  font-size: 12pt;
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+  margin-top: 0;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38pt;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 330px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  header h1 {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+}
