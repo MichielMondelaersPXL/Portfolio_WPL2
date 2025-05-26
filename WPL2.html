@@ -167,6 +167,38 @@
     });
   });
 
+
+    // Meerdere carousels ondersteunen
+    document.querySelectorAll('.carousel').forEach(initCarousel);
+
+    function initCarousel(carousel) {
+    const slides = carousel.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    // Toon de eerste slide
+    showSlide(currentIndex);
+
+    // Event listeners voor knoppen
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+
+    prevBtn.addEventListener('click', () => changeSlide(-1));
+    nextBtn.addEventListener('click', () => changeSlide(1));
+
+    function changeSlide(direction) {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+    function showSlide(index) {
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[index].style.display = 'block';
+    slides[index].classList.add('active');
+  }
+  }
+
+
 </script>
 
 </body>
